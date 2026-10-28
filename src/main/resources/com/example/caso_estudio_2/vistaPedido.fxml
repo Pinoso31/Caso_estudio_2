@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="CENTER"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.caso_estudio_2.pedidos.PedidoController"
+      prefWidth="420" prefHeight="280">
+
+    <padding>
+        <Insets top="25" right="30" bottom="25" left="30"/>
+    </padding>
+
+    <Label text="Sistema de Pedidos (30 pedidos)" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <!-- Contador de pedidos completados -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Pedidos completados:"/>
+        <Label fx:id="lblContador" text="0 / 30" style="-fx-font-size: 14px;"/>
+    </HBox>
+
+    <!-- Barra de progreso -->
+    <ProgressBar fx:id="barraProgreso" prefWidth="300" progress="0"/>
+
+    <!-- Estado de la aplicación -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Estado:"/>
+        <Label fx:id="lblEstado" text="Listo" style="-fx-font-weight: bold;"/>
+    </HBox>
+
+    <!-- Botones -->
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="btnIniciar" text="Iniciar" onAction="#onIniciar" prefWidth="110"/>
+        <Button fx:id="btnCancelar" text="Cancelar" onAction="#onCancelar" prefWidth="110" disable="true"/>
+    </HBox>
+
+</VBox>
